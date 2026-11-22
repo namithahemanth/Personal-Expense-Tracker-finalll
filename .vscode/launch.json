@@ -1,0 +1,21 @@
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run PersonalExpenseTracker",
+      "request": "launch",
+      "mainClass": "Main",
+      "classPaths": [
+        "${workspaceFolder}/out",
+        "${workspaceFolder}/libs/pdfbox-3.0.3.jar",
+        "${workspaceFolder}/libs/pdfbox-io-3.0.3.jar",
+        "${workspaceFolder}/libs/fontbox-3.0.3.jar",
+        "${workspaceFolder}/libs/commons-logging-1.3.3.jar"
+      ],
+      "preLaunchTask": "Compile PersonalExpenseTracker",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
