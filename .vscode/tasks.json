@@ -1,0 +1,28 @@
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile PersonalExpenseTracker",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "New-Item -ItemType Directory -Force -Path 'out' | Out-Null; javac -cp 'libs/*' -d 'out' (Get-ChildItem 'src\\*.java' | ForEach-Object { $_.FullName })"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$javac",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      }
+    }
+  ]
+}
